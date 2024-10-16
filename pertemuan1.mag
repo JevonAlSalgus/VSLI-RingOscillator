@@ -1,0 +1,22 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1728978905
+<< error_p >>
+rect 369 637 422 638
+rect 351 603 422 637
+rect 352 602 422 603
+rect 369 568 440 602
+rect 369 89 439 568
+rect 551 500 609 506
+rect 551 466 563 500
+rect 551 460 609 466
+rect 551 172 609 178
+rect 551 138 563 172
+rect 551 132 609 138
+rect 369 53 422 89
+use inverter  x1
+timestamp 1728978905
+transform 1 0 53 0 1 1306
+box -53 -1306 738 200
+<< end >>

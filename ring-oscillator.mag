@@ -1,0 +1,11 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1729044117
+<< checkpaint >>
+rect -1260 -1260 2895 3176
+use oscillator  x1
+timestamp 1729044116
+transform 1 0 53 0 1 1716
+box -53 -1716 1582 200
+<< end >>

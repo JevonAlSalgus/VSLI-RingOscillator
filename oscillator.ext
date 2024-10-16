@@ -1,0 +1,35 @@
+timestamp 1729054991
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inverter inverter_2 1 0 532 0 1 4
+use inverter inverter_1 1 0 -144 0 1 6
+use inverter inverter_0 1 0 1208 0 1 4
+port "OUT" 2 16 572 16 572 v
+port "GND" 1 -142 68 -142 68 v0
+port "VDD" 0 -138 1088 -138 1088 v0
+node "m1_788_560#" 0 0 788 560 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_110_560#" 0 0 110 560 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUT" 0 0 16 572 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "GND" 0 0 -142 68 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 -138 1088 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/VSUBS" "inverter_1/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/VSUBS" "inverter_2/VSUBS"
+merge "inverter_2/VSUBS" "VSUBS"
+merge "inverter_0/IN" "inverter_2/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_2/OUT" "m1_788_560#"
+merge "inverter_0/GND" "inverter_0/XM1/a_n175_n243#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/XM1/a_n175_n243#" "inverter_1/GND"
+merge "inverter_1/GND" "inverter_2/GND"
+merge "inverter_2/GND" "GND"
+merge "inverter_0/VDD" "inverter_0/XM2/w_n211_n284#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/XM2/w_n211_n284#" "inverter_1/VDD"
+merge "inverter_1/VDD" "inverter_2/VDD"
+merge "inverter_2/VDD" "VDD"
+merge "inverter_1/OUT" "inverter_2/IN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_2/IN" "m1_110_560#"
+merge "inverter_0/OUT" "inverter_1/IN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/IN" "OUT"
